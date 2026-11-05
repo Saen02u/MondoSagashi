@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { RefreshCw, X, CheckCircle2, AlertCircle, Clock, Zap, Database, Shield, Layers } from 'lucide-react';
+import { RefreshCw, X, CheckCircle2, AlertCircle, Clock, Zap } from 'lucide-react';
 import { triggerManualSync, fetchSyncRuns, fetchLatestSyncRun } from '../api/syncApi.ts';
 import type { SyncRun } from '../types/sync.ts';
 

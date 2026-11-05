@@ -1,0 +1,100 @@
+name: CI Pipeline - YouTube Live Archive
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ==========================================================
+  # 1. Spring Boot 백엔드 단위/통합 테스트 및 JAR 빌드 검증
+  # ==========================================================
+  backend:
+    name: Backend Test & Build (Java 21)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 소스코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: JDK 21 (Temurin) 설정
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: 백엔드 테스트 및 패키징 빌드 실행
+        working-directory: ./backend
+        run: |
+          mvn clean verify -B
+        env:
+          SPRING_PROFILES_ACTIVE: test
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY || 'fake_test_key_for_ci' }}
+
+      - name: 백엔드 빌드 아티팩트 보관
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: backend-jar
+          path: backend/target/youtube-live-archive-*.jar
+          retention-days: 7
+
+  # ==========================================================
+  # 2. React 프론트엔드 테스트, 린트 및 번들 빌드 검증
+  # ==========================================================
+  frontend:
+    name: Frontend Test & Build (Node 22)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 소스코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Node.js 22 설정
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package.json'
+
+      - name: 의존성 설치
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: 프론트엔드 단위/컴포넌트 테스트 실행
+        working-directory: ./frontend
+        run: npm test
+
+      - name: TypeScript 컴파일 및 Vite 프로덕션 빌드
+        working-directory: ./frontend
+        run: npm run build
+
+      - name: 프론트엔드 빌드 산출물 보관
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: frontend-dist
+          path: frontend/dist/
+          retention-days: 7
+
+  # ==========================================================
+  # 3. Docker 이미지 빌드 정합성 검증
+  # ==========================================================
+  docker-build:
+    name: Dockerfile Build Verification
+    needs: [backend, frontend]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 소스코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Docker Compose 설정 문법 검증
+        run: |
+          docker compose config

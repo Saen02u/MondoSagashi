@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Server, Monitor, Play, Check, RefreshCw, Copy, Terminal, Database } from 'lucide-react';
+import { Server, Monitor, Check, RefreshCw, Copy, Terminal, Database } from 'lucide-react';
 import { getBackendHealth } from '../api/health.ts';
 import type { HealthCheckResponse } from '../types/index.ts';
 

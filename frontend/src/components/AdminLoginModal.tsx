@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, X, Lock, User, AlertCircle, KeyRound, Check } from 'lucide-react';
+import { Shield, X, Lock, User, AlertCircle, KeyRound } from 'lucide-react';
 import { login } from '../api/authApi.ts';
 import type { AuthStatus } from '../types/auth.ts';
 

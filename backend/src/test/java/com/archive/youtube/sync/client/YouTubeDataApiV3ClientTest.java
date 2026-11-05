@@ -96,6 +96,27 @@ class YouTubeDataApiV3ClientTest {
             .andExpect(method(HttpMethod.GET))
             .andRespond(withSuccess(json, MediaType.APPLICATION_JSON));
 
+        String videoDetailsJson = """
+            {
+              "items": [
+                {
+                  "id": "test_video_1",
+                  "snippet": {
+                    "title": "[Mondo] 테스트 라이브 방송",
+                    "liveBroadcastContent": "none"
+                  },
+                  "liveStreamingDetails": {
+                    "actualStartTime": "2026-10-31T15:00:00Z"
+                  }
+                }
+              ]
+            }
+            """;
+
+        mockServer.expect(requestTo("https://www.googleapis.com/youtube/v3/videos?part=snippet,liveStreamingDetails&id=test_video_1&key=AIzaTestFakeKey"))
+            .andExpect(method(HttpMethod.GET))
+            .andRespond(withSuccess(videoDetailsJson, MediaType.APPLICATION_JSON));
+
         YouTubePlaylistItemsPage page = client.fetchPlaylistItems("UU12345", null, 50);
 
         assertThat(page.nextPageToken()).isEqualTo("NEXT_PAGE_TOKEN_ABC");
@@ -103,6 +124,8 @@ class YouTubeDataApiV3ClientTest {
         assertThat(page.items().get(0).videoId()).isEqualTo("test_video_1");
         assertThat(page.items().get(0).title()).isEqualTo("[Mondo] 테스트 라이브 방송");
         assertThat(page.items().get(0).thumbnailUrl()).isEqualTo("https://i.ytimg.com/vi/test_video_1/hqdefault.jpg");
+        assertThat(page.items().get(0).isLiveStream()).isTrue();
+        assertThat(page.items().get(0).liveUrl()).isEqualTo("https://www.youtube.com/live/test_video_1");
 
         mockServer.verify();
     }

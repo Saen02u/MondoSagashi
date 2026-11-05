@@ -64,7 +64,7 @@ class VideoServiceTest {
 
         VideoDetailResponse detail = videoService.getVideoDetail("2yK2D41LzB8");
         assertThat(detail.title()).isEqualTo("영상 제목");
-        assertThat(detail.youtubeWatchUrl()).isEqualTo("https://www.youtube.com/watch?v=2yK2D41LzB8");
+        assertThat(detail.youtubeWatchUrl()).isEqualTo("https://www.youtube.com/live/2yK2D41LzB8");
         assertThat(detail.embedUrl()).isEqualTo("https://www.youtube.com/embed/2yK2D41LzB8");
 
         assertThatThrownBy(() -> videoService.getVideoDetail("not_found"))

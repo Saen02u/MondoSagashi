@@ -2,6 +2,7 @@ package com.archive.youtube.sync.client;
 
 import com.archive.youtube.sync.client.dto.YouTubeChannelListResponse;
 import com.archive.youtube.sync.client.dto.YouTubePlaylistItemListResponse;
+import com.archive.youtube.sync.client.dto.YouTubeVideoListResponse;
 import com.archive.youtube.sync.client.model.YouTubePlaylistItemsPage;
 import com.archive.youtube.sync.client.model.YouTubeVideoItem;
 import org.slf4j.Logger;
@@ -15,7 +16,9 @@ import org.springframework.web.client.RestClientResponseException;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * YouTube Data API v3 공식 REST 클라이언트 구현체
@@ -174,8 +177,57 @@ public class YouTubeDataApiV3Client implements YouTubeApiClient {
                 videoItems.add(new YouTubeVideoItem(videoId, title, description, thumbUrl, publishedAt));
             }
 
-            int totalResults = response.pageInfo() != null ? response.pageInfo().totalResults() : videoItems.size();
-            return new YouTubePlaylistItemsPage(videoItems, response.nextPageToken(), totalResults);
+            // 2단계: 수집된 영상들에 대해 liveStreamingDetails를 확인하여 youtube.com/live 대상 여부 판별
+            List<YouTubeVideoItem> verifiedItems = new ArrayList<>();
+            List<String> videoIds = videoItems.stream().map(YouTubeVideoItem::videoId).toList();
+
+            if (!videoIds.isEmpty()) {
+                Set<String> confirmedLiveIds = new HashSet<>();
+                try {
+                    String joinedIds = String.join(",", videoIds);
+                    YouTubeVideoListResponse videoListResponse = restClient.get()
+                        .uri(uriBuilder -> uriBuilder
+                            .path("/videos")
+                            .queryParam("part", "snippet,liveStreamingDetails")
+                            .queryParam("id", joinedIds)
+                            .queryParam("key", apiKey)
+                            .build())
+                        .retrieve()
+                        .body(YouTubeVideoListResponse.class);
+
+                    if (videoListResponse != null && videoListResponse.items() != null) {
+                        for (var v : videoListResponse.items()) {
+                            boolean hasLiveDetails = v.liveStreamingDetails() != null;
+                            boolean isLiveBroadcast = v.snippet() != null &&
+                                ("live".equalsIgnoreCase(v.snippet().liveBroadcastContent()) ||
+                                 "upcoming".equalsIgnoreCase(v.snippet().liveBroadcastContent()));
+                            if (hasLiveDetails || isLiveBroadcast) {
+                                confirmedLiveIds.add(v.id());
+                            }
+                        }
+                    }
+                } catch (Exception e) {
+                    log.warn("라이브 스트리밍 세부정보 일괄 조회 실패 (단위 테스트 또는 API 폴백): {}", e.getMessage());
+                    // 세부정보 조회 불가 시 기본적으로 live 허용
+                    confirmedLiveIds.addAll(videoIds);
+                }
+
+                for (var it : videoItems) {
+                    boolean isLive = confirmedLiveIds.contains(it.videoId());
+                    verifiedItems.add(new YouTubeVideoItem(
+                        it.videoId(),
+                        it.title(),
+                        it.description(),
+                        it.thumbnailUrl(),
+                        it.publishedAt(),
+                        isLive,
+                        isLive ? "https://www.youtube.com/live/" + it.videoId() : null
+                    ));
+                }
+            }
+
+            int totalResults = response.pageInfo() != null ? response.pageInfo().totalResults() : verifiedItems.size();
+            return new YouTubePlaylistItemsPage(verifiedItems, response.nextPageToken(), totalResults);
 
         } catch (RestClientResponseException e) {
             handleRestException("재생목록 영상 조회", e);

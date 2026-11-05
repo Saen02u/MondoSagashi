@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Play, Share2, Copy, Check, Clock, ExternalLink, Youtube, Tag as TagIcon, Sparkles } from 'lucide-react';
+import { ArrowLeft, Play, Share2, Copy, Check, ExternalLink } from 'lucide-react';
 import { fetchVideoDetail } from '../api/videoApi.ts';
 import { TimestampNoteSection } from '../components/TimestampNoteSection.tsx';
 import type { VideoDetail } from '../types/video.ts';

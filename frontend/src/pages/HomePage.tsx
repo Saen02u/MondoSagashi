@@ -8,7 +8,7 @@ import { VideoDetailPage } from './VideoDetailPage.tsx';
 import { AdminLoginModal } from '../components/AdminLoginModal.tsx';
 import { SyncModal } from '../components/SyncModal.tsx';
 import { StatusBadge } from '../components/StatusBadge.tsx';
-import { CheckCircle2, GitBranch, Terminal, Video } from 'lucide-react';
+import { GitBranch, Terminal } from 'lucide-react';
 import { getAuthStatus, logout, initCsrf } from '../api/authApi.ts';
 import type { AuthStatus } from '../types/auth.ts';
 

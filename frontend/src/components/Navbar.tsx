@@ -1,5 +1,5 @@
 import React from 'react';
-import { Video, Layers, Terminal, BookOpen, Shield, LogIn, LogOut, CheckCircle2, RefreshCw } from 'lucide-react';
+import { Video, Layers, Terminal, BookOpen, Shield, LogIn, LogOut, RefreshCw } from 'lucide-react';
 import type { AuthStatus } from '../types/auth.ts';
 
 interface NavbarProps {

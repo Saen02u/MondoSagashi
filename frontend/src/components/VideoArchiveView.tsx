@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Video, RefreshCw, ExternalLink, Play, Database, Youtube, CheckCircle2, ShieldCheck } from 'lucide-react';
+import React, { useState } from 'react';
+import { RefreshCw, ExternalLink, Play, Database, Youtube, CheckCircle2 } from 'lucide-react';
 import { getVideos } from '../api/video.ts';
 import type { VideoResponse } from '../types/index.ts';
 

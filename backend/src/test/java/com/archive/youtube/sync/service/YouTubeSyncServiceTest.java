@@ -157,4 +157,37 @@ class YouTubeSyncServiceTest {
         assertThat(response.status()).isEqualTo(SyncStatus.FAILED);
         assertThat(response.errorMessage()).contains("할당량이 초과되었습니다");
     }
+
+    @Test
+    @DisplayName("라이브 스트리밍(youtube.com/live) 영상만 수집하고 일반 업로드 영상은 필터링하여 제외한다")
+    void filtersOutNonLiveVideos_onlyCollectsYoutubeComLive() {
+        // Given
+        given(channelRepository.findByCustomUrl("@Mondo2233")).willReturn(Optional.of(testChannel));
+        given(syncRunRepository.save(any(SyncRun.class))).willAnswer(invocation -> invocation.getArgument(0));
+        given(youTubeApiClient.isConfigured()).willReturn(true);
+        given(youTubeApiClient.getUploadsPlaylistId("@Mondo2233")).willReturn("UU_TEST_PLAYLIST");
+
+        // 1개는 라이브 스트리밍(youtube.com/live/live_1), 1개는 일반 업로드 영상(isLiveStream=false)
+        List<YouTubeVideoItem> items = List.of(
+            new YouTubeVideoItem("live_1", "에이펙스 풀 라이브 방송", "설명", "thumb1.jpg", LocalDateTime.now(), true, "https://www.youtube.com/live/live_1"),
+            new YouTubeVideoItem("upload_2", "하이라이트 30초 숏폼 클립", "설명", "thumb2.jpg", LocalDateTime.now(), false, null)
+        );
+        given(youTubeApiClient.fetchPlaylistItems(eq("UU_TEST_PLAYLIST"), any(), anyInt()))
+            .willReturn(new YouTubePlaylistItemsPage(items, null, 2));
+
+        given(videoRepository.findByYoutubeVideoId("live_1")).willReturn(Optional.empty());
+
+        // When
+        SyncRunResponse response = syncService.runSync(null, "admin");
+
+        // Then
+        assertThat(response.status()).isEqualTo(SyncStatus.SUCCESS);
+        assertThat(response.totalItemsFetched()).isEqualTo(2);
+        assertThat(response.newItemsInserted()).isEqualTo(1); // 오직 라이브 1개만 신규 등록됨
+
+        // 신규 등록된 영상이 live_1 인지 검증
+        ArgumentCaptor<Video> videoCaptor = ArgumentCaptor.forClass(Video.class);
+        verify(videoRepository).save(videoCaptor.capture());
+        assertThat(videoCaptor.getValue().getYoutubeVideoId()).isEqualTo("live_1");
+    }
 }

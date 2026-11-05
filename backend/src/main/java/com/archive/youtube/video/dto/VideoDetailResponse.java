@@ -23,7 +23,7 @@ public record VideoDetailResponse(
     List<TagResponse> tags
 ) {
     public static VideoDetailResponse from(Video video) {
-        String watchUrl = "https://www.youtube.com/watch?v=" + video.getYoutubeVideoId();
+        String watchUrl = "https://www.youtube.com/live/" + video.getYoutubeVideoId();
         String embedUrl = "https://www.youtube.com/embed/" + video.getYoutubeVideoId();
 
         List<TagResponse> tagResponses = video.getTags() != null

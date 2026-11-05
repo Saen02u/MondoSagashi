@@ -108,6 +108,12 @@ public class YouTubeSyncService {
                 for (YouTubeVideoItem item : page.items()) {
                     totalFetched++;
 
+                    // [핵심 필터 규칙]: youtube.com/live로 시작하는 라이브 방송 영상만 아카이브에 수집
+                    if (!item.isLiveStream() || item.liveUrl() == null || !item.liveUrl().startsWith("https://www.youtube.com/live/")) {
+                        log.info("라이브 방송(youtube.com/live)이 아닌 일반 영상은 아카이브 수집 대상에서 제외합니다: {} ({})", item.title(), item.videoId());
+                        continue;
+                    }
+
                     Optional<Video> existingOpt = videoRepository.findByYoutubeVideoId(item.videoId());
                     if (existingOpt.isPresent()) {
                         // 기존 영상 존재: 공개 메타데이터만 갱신 (태그/메모는 불변 보존)

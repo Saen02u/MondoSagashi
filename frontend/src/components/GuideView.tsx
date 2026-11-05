@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, CheckCircle2, ShieldCheck, Code2, Cpu, Database } from 'lucide-react';
+import { BookOpen, ShieldCheck, Code2, Cpu, Database } from 'lucide-react';
 
 export const GuideView: React.FC = () => {
   return (

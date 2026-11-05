@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { RefreshCw, AlertTriangle, Inbox, ExternalLink, Youtube, Database, Search, Filter, ArrowUpDown, ChevronLeft, ChevronRight, Tag as TagIcon } from 'lucide-react';
+import { RefreshCw, AlertTriangle, Inbox, ExternalLink, Youtube, Database, Search, Filter, ArrowUpDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { fetchVideos, fetchTags } from '../api/videoApi.ts';
 import { VideoCard } from '../components/VideoCard.tsx';
 import { VideoSkeleton } from '../components/VideoSkeleton.tsx';

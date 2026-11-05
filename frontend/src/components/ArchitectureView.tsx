@@ -1,5 +1,5 @@
 import React from 'react';
-import { Database, FolderTree, Key, Youtube, Tag, FileText, RefreshCw, Globe, CheckCircle, Server, Table } from 'lucide-react';
+import { Database, FolderTree, Key, Youtube, Tag, FileText, RefreshCw, Globe, CheckCircle, Table } from 'lucide-react';
 
 export const ArchitectureView: React.FC = () => {
   const domains = [
