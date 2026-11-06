@@ -1,4 +1,4 @@
-# MondoSagashi (問答探し) — YouTube VOD Archive
+# MondoSagashi (Mondo探し) — YouTube VOD Archive
 
 > YouTube 라이브 방송 다시보기(VOD)와 상세 마크다운 메모를 체계적으로 정리하고 검색하는 무서버(Serverless) 정적 웹 아카이브입니다.
 
