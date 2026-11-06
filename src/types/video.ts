@@ -7,6 +7,7 @@ export interface Video {
   youtubeUrl: string;
   broadcastDate: string; // ISO format: YYYY-MM-DD
   channelName: string;
+  duration: string; // Format: HH:MM:SS
   description: string;
   tags: string[];
   memo: string; // Markdown formatted notes
