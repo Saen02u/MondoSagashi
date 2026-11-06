@@ -1,0 +1,84 @@
+{
+  "videos": [
+    {
+      "id": "vod-20261104-01",
+      "title": "심야 라이브 코딩: Rust 기반 초고속 파일 인덱서 만들기 & 성능 벤치마크",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "broadcastDate": "2026-11-04",
+      "channelName": "DevCraft Archive",
+      "description": "Rust와 Rayon을 활용해 멀티스레드 기반으로 대용량 디렉토리를 탐색하고 색인하는 CLI 도구를 실시간으로 설계하고 작성한 방송입니다. 메모리 사용량과 I/O 병목 분석을 함께 다룹니다.",
+      "tags": ["개발", "Rust", "라이브코딩", "시스템프로그래밍"],
+      "memo": "# 방송 상세 메모: Rust 파일 인덱서 구현\n\n오늘 방송에서는 수백만 개의 파일 시스템 엔트리를 3초 이내에 인덱싱하는 Rust 도구를 바닥부터 작성했습니다.\n\n## 1. 주요 타임라인 및 진행 내용\n- **00:15:00** 방송 시작 및 오늘 목표 아키텍처 개요\n- **00:45:30** `walkdir` 라이브러리와 `rayon` 병렬 이터레이터 연동\n- **01:30:10** MPSC 채널 기반 워커 스레드와 수집기 설계\n- **02:15:00** 리눅스 `epoll` vs macOS `kqueue` 이벤트 루프 토론\n- **03:00:00** 벤치마크 결과 확인 및 Q&A 세션\n\n---\n\n## 2. 핵심 코드 패턴\n방송에서 작성한 병렬 탐색 파이프라인의 핵심 루프:\n\n```rust\nuse rayon::prelude::*;\nuse std::path::{Path, PathBuf};\nuse walkdir::WalkDir;\n\npub fn scan_directory_parallel(root: &Path) -> Vec<PathBuf> {\n    WalkDir::new(root)\n        .into_iter()\n        .filter_map(|e| e.ok())\n        .par_bridge()\n        .filter(|entry| entry.file_type().is_file())\n        .map(|entry| entry.into_path())\n        .collect()\n}\n```\n\n> \"I/O 바운드 작업에서는 무조건 스레드를 늘리기보다 OS 커널의 버퍼 캐시 적중률과 디스크 큐 깊이를 고려해야 합니다.\"\n\n## 3. 체크리스트 및 다음 방송 과제\n- [x] 병렬 디렉토리 워커 구현 완료\n- [x] 메모리 누수 없는 버퍼 풀링 검증\n- [ ] SQLite FTS5 검색 엔진과 인덱스 동기화 구현\n- [ ] GUI 프론트엔드 연동 테스트\n\n참고 공식 문서: [The Rust Programming Language](https://doc.rust-lang.org/book/)"
+    },
+    {
+      "id": "vod-20261102-01",
+      "title": "엘든 링: 황금나무의 그림자 노히트 보스 릴레이 도전 3일차",
+      "youtubeUrl": "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+      "broadcastDate": "2026-11-02",
+      "channelName": "소울본 연구소",
+      "description": "DLC 메스메르 및 가시공 보스전 무피격(No Hit) 클리어 도전 3일차 방송입니다. 패링 타이밍 프레임 분석과 회피 경로를 상세히 해설합니다.",
+      "tags": ["게임", "엘든링", "노히트", "공략"],
+      "memo": "## 3일차 공략 기록 요약\n\n가시공 메스메르 2페이즈 뱀 공격 패턴 대응법을 중점적으로 훈련했습니다.\n\n### 1. 주요 보스 패턴 분석\n1. **회전 창 찌르기 (3연격)**: 첫 타격은 우측 45도 전방 롤, 두 번째 타격 0.3초 딜레이 후 후방 백스텝, 3타 내려찍기 후 점프 강공격 찬스\n2. **공중 불꽃 강하**: 착지 타이밍에 즉시 전방 롤 후 불길 폭발 반경 밖으로 질주\n3. **심연의 뱀 소환 (2페이즈)**: 뱀이 지면을 찍을 때 시계 방향으로 원형 이동\n\n---\n\n### 2. 세팅 및 장비 구성\n- 무기: `+25 예리한 자비의 단검` (전회: 사냥개의 스텝)\n- 탈리스만: 단검의 탈리스만, 녹색 거북 탈리스만 +2\n- 버프 루틴: 황금 나무에 맹세코 → 불이여, 힘을!\n\n> **플레이어 메모**: 메스메르의 화염 잔상은 판정이 시각 이펙트보다 약 4프레임 일찍 종료되므로 너무 늦게 구르면 후속 폭발에 피격됨.\n\n### 3. 달성 현황\n- [x] 1페이즈 패링 3회 성공 루틴 안정화\n- [x] 2페이즈 뱀 연타 패턴 100% 회피 성공\n- [ ] 전체 연계 노히트 최종 킬 (다음 방송 이어서 진행)"
+    },
+    {
+      "id": "vod-20261028-01",
+      "title": "가을밤 잔잔한 작업 라디오: UI 디자인 컴포넌트 정리 & 일상 잡담",
+      "youtubeUrl": "https://www.youtube.com/watch?v=3JZ_D3ELwOQ",
+      "broadcastDate": "2026-10-28",
+      "channelName": "Studio Monologue",
+      "description": "Figma에서 디자인 토큰과 다크 테마 컬러 팔레트를 정비하며, 최근 읽은 책 이야기와 편안한 Lo-Fi 배경음악과 함께 진행한 소통형 잡담 방송입니다.",
+      "tags": ["잡담", "디자인", "라디오", "일상"],
+      "memo": "## 잔잔한 작업 라디오 메모\n\n시청자분들과 디자인 시스템에 대한 고민을 나누며 편안하게 진행한 4시간 방송입니다.\n\n### 추천 도서 및 공유 링크\n- [디자인과 형태에 관한 노트](https://example.com/books/design-notes)\n- [타이포그래피의 원리](https://example.com/typography-essentials)\n\n### 오늘 다룬 디자인 토큰 원칙\n- **60-30-10 규칙 준수**: 60% 슬레이트 배경, 30% 보조 표면, 10% 황동빛 악센트 포인트.\n- **Zero-Pill 철학**: 무분별한 캡슐형 뱃지 남용을 줄이고 단정한 텍스트 분리 기호(`·`)를 우선 사용.\n\n> \"좋은 디자인은 무엇을 더할지가 아니라 무엇을 제거해도 온전한가에서 드러납니다.\"\n\n### 플레이리스트 & 트랙\n1. *Midnight Train on Kyoto Line* - Ambient Lo-Fi\n2. *Rainy Window Sketch* - Acoustic Guitar\n3. *Autumn Breeze in Slate* - Slow Piano Solo\n\n- [x] 슬레이트 컬러 팔레트 5단계 확정\n- [x] 폰트 페어링: Plus Jakarta Sans & JetBrains Mono\n- [ ] 모바일 터치 패딩 최소 44px 검증표 완성"
+    },
+    {
+      "id": "vod-20261022-01",
+      "title": "팩토리오 스페이스 에이지: 바이터 제로 행성 자동화 공장 120시간 완결편",
+      "youtubeUrl": "https://www.youtube.com/watch?v=L_LUpnjgPso",
+      "broadcastDate": "2026-10-22",
+      "channelName": "공장장 아카이브",
+      "description": "신규 우주 플랫폼 구축부터 각 행성간 물류 로켓 자동화, 프로메튬 과학팩 대량 생산까지 완성한 팩토리오 스페이스 에이지 120시간 대장정의 마지막 방송입니다.",
+      "tags": ["게임", "팩토리오", "시뮬레이션", "자동화"],
+      "memo": "# 팩토리오 스페이스 에이지 최종 자동화 기록\n\n드디어 5개 행성 간 행성간 물류망을 완전 자율 무인 체계로 구축 완료했습니다!\n\n## 1. 행성별 핵심 생산 기지 현황\n- **나우비스 (모행성)**: 기본 철/구리 제련 및 녹색/적색 회로 허브\n- **불카누스 (화산 행성)**: 용암 직접 주조 방식을 통한 무한 철판/강철 수급\n- **글레바 (바이오 행성)**: 영양액 기반 유기물 복제 공정 (부패 타이머 15분 관리)\n- **풀고라 (번개 행성)**: 전자 폐기물 재활용 및 홀뮴 판 농축 처리\n- **아퀼로 (얼음 행성)**: 액체 불소 냉각 및 프로메튬 우주선 연료 생산\n\n---\n\n## 2. 물류 회로 제어 네트워크\n\n```text\n[화물 로켓 발사대]\n  조건: 행성 A 요청 수량 > 500 AND 플랫폼 착륙패드 여유 슬롯 >= 1\n  인터럽트: 연료 탱크 잔량 < 20% 시 보급선 즉시 회항\n```\n\n### 최종 결과 지표\n- 분당 프로메튬 과학팩(SPM): `2,400 SPM` 안정 도달\n- 전력 생산량: `18.4 GW` (핵융합 원자로 16기 풀가동)\n- [x] 모든 우주 엔딩 업적 달성 완료\n- [x] 행성간 정기 셔틀 플랫폼 무사고 400회 왕복"
+    },
+    {
+      "id": "vod-20261015-01",
+      "title": "WebGL 셰이더 기초부터 입체 파티클 시스템 구현까지 라이브 워크숍",
+      "youtubeUrl": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
+      "broadcastDate": "2026-10-15",
+      "channelName": "DevCraft Archive",
+      "description": "Three.js와 커스텀 GLSL 버텍스/프래그먼트 셰이더를 사용해 10만 개의 파티클이 마우스 인터랙션에 반응하는 3D 인터랙티브 캔버스를 구축했습니다.",
+      "tags": ["개발", "WebGL", "Three.js", "GLSL", "라이브코딩"],
+      "memo": "# WebGL 파티클 셰이더 워크숍 노트\n\nCPU 연산 대신 GPU 셰이더 속성을 활용해 60FPS를 유지하는 100,000 파티클 시뮬레이션입니다.\n\n## 1. GLSL 버텍스 셰이더 코드 스니펫\n\n```glsl\nuniform float uTime;\nuniform vec2 uMouse;\nattribute float aScale;\n\nvarying vec3 vColor;\n\nvoid main() {\n    vec3 pos = position;\n    float dist = distance(pos.xy, uMouse);\n    pos.z += sin(dist * 8.0 - uTime * 2.0) * 0.25;\n    \n    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);\n    gl_PointSize = aScale * (30.0 / -mvPosition.z);\n    gl_Position = projectionMatrix * mvPosition;\n    \n    vColor = vec3(0.85, 0.70, 0.35); // warm brass accent\n}\n```\n\n## 2. 주의해야 할 최적화 포인트\n- **InstancedBufferGeometry 사용**: 개별 메시 생성 대신 인스턴싱으로 드로우 콜(Draw Call) 1회 유지\n- **정밀도 한정자**: 모바일 GPU 대응을 위해 `precision mediump float;` 명시\n- **알파 블렌딩 순서**: 파티클 깊이 테스팅(`depthWrite: false`)으로 깜빡임 방지\n\n> 셰이더 프로그래밍은 병렬적 사고가 필수입니다. 모든 픽셀과 정점이 동시에 계산된다는 점을 기억하세요."
+    },
+    {
+      "id": "vod-20261008-01",
+      "title": "산나비(SAN-NABI) 스피드런 전설 난이도 & 스토리 다시 음미하기",
+      "youtubeUrl": "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
+      "broadcastDate": "2026-10-08",
+      "channelName": "소울본 연구소",
+      "description": "국산 사이버펑크 조선 활극 인디 명작 '산나비'의 사슬팔 기믹을 극한으로 활용한 스피드런 및 명대사 회고 방송입니다.",
+      "tags": ["게임", "산나비", "인디게임", "스토리"],
+      "memo": "## 산나비 스피드런 및 스토리 회고\n\n사슬팔 그랩 가속 테크닉을 연습하며 엔딩 명장면을 다시 감상한 방송입니다.\n\n### 사슬팔 고급 조작 테크닉\n1. **스윙 캔슬 점프**: 사슬이 벽에 닿아 최대 장력에 도달하기 직전 점프 키 입력으로 1.8배 가속 획득\n2. **천장 리바운드**: 대각선 45도 천장 고정 후 릴리스 타이밍 제어로 레이저 트랩 즉시 스킵\n3. **슈퍼 슬라이딩**: 낙하 속도를 슬라이딩 마찰 감소로 전환하는 착지 프레임 기법\n\n### 인상 깊은 명대사 발췌\n> \"아빠, 약속할게. 절대 잊지 않을게.\"\n> 철호의 결단과 마고 특별시의 비극적인 진실이 드러나는 챕터 5 클라이맥스는 연출의 정점입니다.\n\n- [x] 챕터 1 마고시 최하층 08분 12초 주파\n- [x] 공장 구역 저스티스 보스전 패턴 1회차 성공\n- [ ] 감독판 추가 에필로그 전체 텍스트 수집 완료"
+    },
+    {
+      "id": "vod-20261001-01",
+      "title": "개발자 데스크 셋업 룸투어 & 키보드 빌드 토크 라이브",
+      "youtubeUrl": "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+      "broadcastDate": "2026-10-01",
+      "channelName": "Studio Monologue",
+      "description": "커스텀 기계식 키보드(Geon Frog TKL, 삼신흑 윤활) 조립 과정과 생산성을 극대화한 3개 모니터 셋업, 조명 세팅을 공유한 토크 방송입니다.",
+      "tags": ["잡담", "키보드", "데스크셋업", "하드웨어"],
+      "memo": "## 데스크 셋업 & 키보드 빌드 사양 정리\n\n오늘 방송에서 조립하고 타건 테스트를 진행한 키보드 및 데스크 환경 정보입니다.\n\n### 1. 키보드 빌드 스펙\n- 하우징: `Geonworks Frog TKL` (다크 네이비 아노다이징)\n- 보강판: 알루미늄 하프 보강판\n- 스위치: 체리 삼신흑 (크라이톡스 205g0 슬라이더, 105 스프링 윤활, 62g 롱스프링 교체)\n- 스테빌라이저: 줄테빌 v2 (퍼마텍스 윤활)\n- 키캡: GMK Dark (체리 프로파일 이중사출)\n\n### 2. 데스크 오거나이제이션 원칙\n- **케이블 완전 매립**: 책상 하부 트레이와 자석 케이블 덕트를 통해 시야에 노출되는 전선 0개 달성\n- **간접 조명 구성**: 3000K 색온도의 벽면 바운스 라이트로 야간 모니터 눈부심 최소화\n- **모니터 암 세팅**: 메인 32인치 4K 정면 + 서브 27인치 세로 피벗 (코드 및 문서 전용)\n\n> 타건감은 알루미늄 특유의 단단하고 깔끔한 클래키(Clacky) 사운드로 완성되었습니다."
+    },
+    {
+      "id": "vod-20260920-01",
+      "title": "웹 어셈블리(Wasm)로 브라우저 안에서 구동하는 이미지 처리 엔진 개발",
+      "youtubeUrl": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
+      "broadcastDate": "2026-09-20",
+      "channelName": "DevCraft Archive",
+      "description": "C++ 및 Rust로 작성된 컨볼루션 필터 알고리즘을 WebAssembly로 컴파일하여 브라우저에서 실시간 4K 이미지 블러/선명화 필터를 60FPS로 렌더링하는 프로젝트입니다.",
+      "tags": ["개발", "Wasm", "Rust", "성능최적화"],
+      "memo": "## Wasm 이미지 프로세서 연구 메모\n\n순수 자바스크립트 `CanvasRenderingContext2D.getImageData` vs WebAssembly 공유 메모리 버퍼 성능 비교 방송입니다.\n\n### 1. 벤치마크 결과 (4K 이미지 가우시안 블러)\n- **Vanilla JavaScript**: `148.2 ms` (프레임 드랍 발생)\n- **Rust Wasm (SIMD 비활성화)**: `32.6 ms` (약 4.5배 향상)\n- **Rust Wasm (SIMD 128비트 활성화)**: `11.8 ms` (약 12.5배 향상, 60fps 무난히 달성)\n\n### 2. 컴파일 플래그 설정\n\n```toml\n[package]\nname = \"wasm-image-filter\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[lib]\ncrate-type = [\"cdylib\"]\n\n[profile.release]\nlto = true\nopt-level = 3\ncodegen-units = 1\n```\n\n- [x] Wasm 메모리 직접 바인딩 완료\n- [x] SharedArrayBuffer 멀티스레드 워커 프로토타입 완료\n- [ ] 브라우저 WebGPU 백엔드 전환 테스트 준비"
+    }
+  ]
+}

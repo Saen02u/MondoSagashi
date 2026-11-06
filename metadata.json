@@ -1,8 +1,6 @@
 {
-  "name": "YouTube Live Archive",
-  "description": "YouTube 라이브 다시보기 아카이브 웹 서비스",
+  "name": "MondoSagashi",
+  "description": "YouTube live broadcast VOD archive and stream notes repository with client-side search and tag classification.",
   "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
