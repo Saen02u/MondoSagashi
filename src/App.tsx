@@ -3,8 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import App from '../frontend/src/App.tsx';
-
-export default function RootApp() {
-  return <App />;
+export default function App() {
+  return <div></div>;
 }
