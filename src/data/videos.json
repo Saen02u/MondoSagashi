@@ -1,6 +1,28 @@
 {
   "videos": [
     {
+      "id": "lO_9Z6FpzbY",
+      "title": "d",
+      "youtubeUrl": "https://www.youtube.com/watch?v=lO_9Z6FpzbY",
+      "broadcastDate": "2026-11-08",
+      "channelName": "Mondo",
+      "duration": "6:05:49",
+      "description": "",
+      "tags": ["GTA5", "STGR2", "MonD"],
+      "memo": ""
+    },
+    {
+      "id": "ijsLh3VvvOE",
+      "title": "d",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ijsLh3VvvOE",
+      "broadcastDate": "2026-11-07",
+      "channelName": "Mondo",
+      "duration": "6:05:49",
+      "description": "",
+      "tags": ["GTA5", "STGR2", "MonD"],
+      "memo": ""
+    },
+    {
       "id": "SzhVCIkYPFw",
       "title": "d",
       "youtubeUrl": "https://www.youtube.com/watch?v=SzhVCIkYPFw",
@@ -8,7 +30,7 @@
       "channelName": "Mondo",
       "duration": "6:05:49",
       "description": "",
-      "tags": ["GTA5", "STGR", "MonD"],
+      "tags": ["GTA5", "STGR2", "MonD"],
       "memo": ""
     },
     {
@@ -19,7 +41,7 @@
       "channelName": "Mondo",
       "duration": "2:36:47",
       "description": "",
-      "tags": ["GTA5","STGR","Ruri"],
+      "tags": ["GTA5","STGR2","Ruri"],
       "memo": ""
     },
     {
@@ -30,7 +52,7 @@
       "channelName": "Mondo",
       "duration": "21:08",
       "description": "",
-      "tags": ["GTA5","STGR","Ruri"],
+      "tags": ["GTA5","STGR2","Ruri"],
       "memo": ""
     },
     {
