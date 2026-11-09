@@ -199,16 +199,6 @@ export default function App() {
                   {filteredVideos.length}
                 </strong>
                 편
-                {totalPages > 1 && (
-                  <span className="text-slate-500 ml-1.5">
-                    (페이지 {currentPage}/{totalPages} · 페이지당 20개)
-                  </span>
-                )}
-                {(searchQuery || selectedTags.length > 0) && (
-                  <span className="text-slate-500 ml-1.5">
-                    · 전체 {allVideos.length}편 중 필터링됨
-                  </span>
-                )}
               </span>
 
               {(searchQuery || selectedTags.length > 0) && (

@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
         <div className="flex items-center gap-4 text-slate-500">
           <span>© 2026 MondoSagashi</span>
           <span className="text-slate-700">·</span>
-          <span>Feedback: saenozu@gmail.com / X:@ri_henol</span>
+          <span>X: @ri_henol</span>
         </div>
       </div>
     </footer>
