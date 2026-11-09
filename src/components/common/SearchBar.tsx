@@ -26,7 +26,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder="제목, 채널명, 내용, 태그로 검색..."
+          placeholder="제목, 내용, 태그로 검색..."
           className="w-full h-11 pl-10 pr-24 bg-[#111722] border border-slate-800 text-slate-100 placeholder:text-slate-500 text-sm rounded-lg focus:outline-none focus:border-amber-500/80 focus:ring-1 focus:ring-amber-500/40 transition-colors shadow-sm"
         />
         <div className="absolute right-3 flex items-center gap-2">

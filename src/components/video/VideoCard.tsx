@@ -1,6 +1,6 @@
 import React from 'react';
 import { Video } from '../../types/video';
-import { Calendar, Tv, ExternalLink, FileText, ChevronRight } from 'lucide-react';
+import { Calendar, Tv, Clock, ExternalLink, FileText, ChevronRight } from 'lucide-react';
 
 interface VideoCardProps {
   video: Video;
@@ -26,6 +26,11 @@ export const VideoCard: React.FC<VideoCardProps> = ({
           <span className="inline-flex items-center gap-1.5 text-slate-400">
             <Calendar className="w-3.5 h-3.5 opacity-70" />
             <time dateTime={video.broadcastDate}>{video.broadcastDate}</time>
+          </span>
+          <span aria-hidden="true" className="text-slate-600">·</span>
+          <span className="inline-flex items-center gap-1.5 text-slate-400">
+            <Clock className="w-3.5 h-3.5 opacity-70" />
+            {video.duration}
           </span>
         </div>
 

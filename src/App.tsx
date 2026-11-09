@@ -9,9 +9,11 @@ import { TagFilter } from './components/tag/TagFilter';
 import { VideoList } from './components/video/VideoList';
 import { VideoDetail } from './components/video/VideoDetail';
 import { NotFound } from './components/common/NotFound';
+import { Pagination } from './components/common/Pagination';
 
 const archiveData = rawData as VideoArchiveData;
 const allVideos: Video[] = archiveData.videos;
+const ITEMS_PER_PAGE = 20;
 
 /**
  * Extracts current video ID from window.location search parameters
@@ -45,6 +47,7 @@ export default function App() {
   const [currentVideoId, setCurrentVideoId] = useState<string | null>(() => getVideoIdFromUrl());
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   // Sync state with browser back/forward buttons
   useEffect(() => {
@@ -56,6 +59,11 @@ export default function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  // Reset to first page when search query or tags change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedTags]);
 
   // Navigation handlers
   const handleSelectVideo = useCallback((videoId: string) => {
@@ -89,12 +97,26 @@ export default function App() {
   const handleResetFilters = useCallback(() => {
     setSearchQuery('');
     setSelectedTags([]);
+    setCurrentPage(1);
+  }, []);
+
+  // Page change handler with smooth scrolling to top
+  const handlePageChange = useCallback((page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   // Filtered video list
   const filteredVideos = useMemo(() => {
     return filterVideos(allVideos, searchQuery, selectedTags);
   }, [searchQuery, selectedTags]);
+
+  // Pagination calculation
+  const totalPages = Math.ceil(filteredVideos.length / ITEMS_PER_PAGE) || 1;
+  const paginatedVideos = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredVideos.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredVideos, currentPage]);
 
   // Tag counts computed from all videos
   const tagsWithCounts = useMemo(() => {
@@ -143,8 +165,11 @@ export default function App() {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-100 mb-3">
                 YouTube 방송 다시보기 아카이브
               </h1>
+              <p className="text-xs sm:text-sm text-red-400 max-w-2xl leading-relaxed">
+                <a href="https://www.youtube.com/@Mondo2233">Mondo Youtube</a>
+              </p>
               <p className="text-xs sm:text-sm text-slate-400 max-w-2xl leading-relaxed">
-                라이브 방송 영상과 상세 타임라인, 토론 주제 및 코드 스니펫 메모를 검색하고 분류할 수 있는 정적 텍스트 아카이브입니다.
+                CR 스트리머 Mondo의 팬메이드 라이브 방송 영상 검색 아카이브입니다.
               </p>
             </div>
 
@@ -174,9 +199,14 @@ export default function App() {
                   {filteredVideos.length}
                 </strong>
                 편
+                {totalPages > 1 && (
+                  <span className="text-slate-500 ml-1.5">
+                    (페이지 {currentPage}/{totalPages} · 페이지당 20개)
+                  </span>
+                )}
                 {(searchQuery || selectedTags.length > 0) && (
                   <span className="text-slate-500 ml-1.5">
-                    (전체 {allVideos.length}편 중 필터링됨)
+                    · 전체 {allVideos.length}편 중 필터링됨
                   </span>
                 )}
               </span>
@@ -193,12 +223,21 @@ export default function App() {
 
             {/* Video Cards Grid */}
             <VideoList
-              videos={filteredVideos}
+              videos={paginatedVideos}
               searchQuery={searchQuery}
               selectedTags={selectedTags}
               onSelectVideo={handleSelectVideo}
               onTagClick={handleToggleTag}
               onResetFilters={handleResetFilters}
+            />
+
+            {/* Pagination Controls */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              totalItems={filteredVideos.length}
+              itemsPerPage={ITEMS_PER_PAGE}
+              onPageChange={handlePageChange}
             />
           </div>
         )}

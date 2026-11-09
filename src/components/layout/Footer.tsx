@@ -7,12 +7,12 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
           <span className="font-semibold text-slate-400">MondoSagashi Archive</span>
           <span className="hidden sm:inline text-slate-700">·</span>
-          <span>정적 텍스트 기반 YouTube 다시보기 보관소</span>
+          <span>An unofficial fan-made archive.</span>
         </div>
         <div className="flex items-center gap-4 text-slate-500">
-          <span>Serverless & Static Export Ready</span>
+          <span>© 2026 MondoSagashi</span>
           <span className="text-slate-700">·</span>
-          <span>Zero Embed · Zero Tracking</span>
+          <span>Feedback: saenozu@gmail.com / X:@ri_henol</span>
         </div>
       </div>
     </footer>
