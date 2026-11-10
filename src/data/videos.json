@@ -3802,7 +3802,7 @@
       "broadcastDate": "2025-02-13",
       "channelName": "Mondo",
       "duration": "5:32:04",
-      "description": "ALLIN vs 餡ブレラ",
+      "description": "ALLIN vs Anbrella 대형 수주권 마치바치 항쟁",
       "tags": ["GTA5","MonD","ALLIN"],
       "memo": ""
     },
@@ -4077,8 +4077,8 @@
       "broadcastDate": "2025-01-23",
       "channelName": "Mondo",
       "duration": "4:27:01",
-      "description": "",
-      "tags": [],
+      "description": "ALLIN vs MOZU 대형 수주권 항쟁",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
       "memo": ""
     },
     {
@@ -4110,8 +4110,8 @@
       "broadcastDate": "2025-01-18",
       "channelName": "Mondo",
       "duration": "5:57:54",
-      "description": "",
-      "tags": [],
+      "description": "ALLIN vs TOPGEAR",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
       "memo": ""
     },
     {
@@ -4275,8 +4275,8 @@
       "broadcastDate": "2025-01-03",
       "channelName": "Mondo",
       "duration": "6:24:53",
-      "description": "",
-      "tags": [],
+      "description": "ALLIN vs Anbrella 대형 수주권 1인칭 항쟁",
+      "tags": ["GTA5","STGR","Ruri","MonD","ALLIN"],
       "memo": ""
     },
     {
@@ -4841,6 +4841,17 @@
       "memo": ""
     },
     {
+      "id": "Fd8i7jsTdmU",
+      "title": "Mon D",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Fd8i7jsTdmU",
+      "broadcastDate": "2024-10-18",
+      "channelName": "Mondo",
+      "duration": "2:39:31",
+      "description": "MOZU+ARCANA+ALLIN 합동 아티팩트",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
       "id": "RZKqBrjywT0",
       "title": "Mon D",
       "youtubeUrl": "https://www.youtube.com/watch?v=RZKqBrjywT0",
@@ -4863,6 +4874,17 @@
       "memo": ""
     },
     {
+      "id": "k24PT1qP3Pg",
+      "title": "Mon D",
+      "youtubeUrl": "https://www.youtube.com/watch?v=k24PT1qP3Pg",
+      "broadcastDate": "2024-10-12",
+      "channelName": "Mondo",
+      "duration": "2:41:15",
+      "description": "ALLIN vs Anbrella 마치바치 항쟁",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
       "id": "onBDMRorULk",
       "title": "Mon D",
       "youtubeUrl": "https://www.youtube.com/watch?v=onBDMRorULk",
@@ -4881,7 +4903,7 @@
       "channelName": "Mondo",
       "duration": "4:20:38",
       "description": "",
-      "tags": [],
+      "tags": ["GTA5","STGR","Ruri","MonD","ALLIN"],
       "memo": ""
     },
     {
@@ -6838,8 +6860,8 @@
       "broadcastDate": "2024-03-15",
       "channelName": "Mondo",
       "duration": "11:55:00",
-      "description": "",
-      "tags": [],
+      "description": "LoL 커스텀(w. ありけん、叶、こうまい、ごっちゃんマイキー、シノくん、ゼルク、so5u、ニョス、日ノ隈らん、Middlee、るなりあ)",
+      "tags": ["GTA5","STGR","MonD","ALLIN","LoL"],
       "memo": ""
     },
     {
