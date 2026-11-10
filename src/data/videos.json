@@ -7,7 +7,7 @@
       "broadcastDate": "2026-11-08",
       "channelName": "Mondo",
       "duration": "6:05:49",
-      "description": "",
+      "description": "아티팩트 수주 무적의 동료 456, 민도리. 재판",
       "tags": ["GTA5", "STGR2", "MonD"],
       "memo": ""
     },
@@ -63,7 +63,7 @@
       "channelName": "Mondo",
       "duration": "1:42:55",
       "description": "",
-      "tags": ["GTA5","STGR FV","MonD"],
+      "tags": ["GTA5","STGRFV","MonD"],
       "memo": ""
     },
     {
@@ -74,7 +74,7 @@
       "channelName": "Mondo",
       "duration": "6:35:05",
       "description": "",
-      "tags": ["GTA5","STGR FV","MonD"],
+      "tags": ["GTA5","STGRFV","MonD"],
       "memo": ""
     },
     {
@@ -3352,7 +3352,7 @@
       "channelName": "Mondo",
       "duration": "1:04:10",
       "description": "",
-      "tags": ["Fortnite", "CR", "VSPO"],
+      "tags": ["Fortnite"],
       "memo": ""
     },
     {
@@ -4363,7 +4363,7 @@
       "broadcastDate": "2024-12-19",
       "channelName": "Mondo",
       "duration": "3:22:17",
-      "description": "GTFO(w.Arisaka, Yumeno Akari, Yakumo Beni",
+      "description": "GTFO(w.Arisaka, Yumeno Akari, Yakumo Beni)",
       "tags": ["GTFO"],
       "memo": ""
     },
@@ -6975,6 +6975,281 @@
       "memo": ""
     },
     {
+      "id": "iSgM4kLdP2w",
+      "title": "2.04【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=iSgM4kLdP2w",
+      "broadcastDate": "2024-02-04",
+      "channelName": "Mondo",
+      "duration": "8:52:13",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "pa-ftbu1duo",
+      "title": "2.03【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=pa-ftbu1duo",
+      "broadcastDate": "2024-02-03",
+      "channelName": "Mondo",
+      "duration": "7:11:00",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "GUBFRlx5Co8",
+      "title": "2.02【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=GUBFRlx5Co8",
+      "broadcastDate": "2024-02-02",
+      "channelName": "Mondo",
+      "duration": "9:24:35",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "Y63PEfogtXY",
+      "title": "2.01【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Y63PEfogtXY",
+      "broadcastDate": "2024-02-01",
+      "channelName": "Mondo",
+      "duration": "11:54:01",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "t2zDiR2E3qE",
+      "title": "1.31【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=t2zDiR2E3qE",
+      "broadcastDate": "2024-01-31",
+      "channelName": "Mondo",
+      "duration": "5:21:37",
+      "description": "",
+      "tags": ["GTA5","STGR","Ruri","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "Yhf98ifyryM",
+      "title": "1.31【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Yhf98ifyryM",
+      "broadcastDate": "2024-01-31",
+      "channelName": "Mondo",
+      "duration": "3:59:09",
+      "description": "",
+      "tags": ["GTA5","STGR","Ruri","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "aoJI2gPGVRk",
+      "title": "1.29【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=aoJI2gPGVRk",
+      "broadcastDate": "2024-01-29",
+      "channelName": "Mondo",
+      "duration": "9:31:11",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "O30dvs-qBTM",
+      "title": "1.28【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=O30dvs-qBTM",
+      "broadcastDate": "2024-01-28",
+      "channelName": "Mondo",
+      "duration": "8:52:28",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "Yxib0-T0mSs",
+      "title": "1.27【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Yxib0-T0mSs",
+      "broadcastDate": "2024-01-27",
+      "channelName": "Mondo",
+      "duration": "6:48:19",
+      "description": "",
+      "tags": ["GTA5","STGR","Ruri","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "21FOamzz5Ro",
+      "title": "1.26【ストグラ/ALLIN】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=21FOamzz5Ro",
+      "broadcastDate": "2024-01-26",
+      "channelName": "Mondo",
+      "duration": "7:37:15",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "Gj4z-S-ORF0",
+      "title": "1.25【ストグラ/ALLIN】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Gj4z-S-ORF0",
+      "broadcastDate": "2024-01-25",
+      "channelName": "Mondo",
+      "duration": "9:33:24",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "bwmu2DzJdyk",
+      "title": "1.24【ストグラ/ALLIN】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=bwmu2DzJdyk",
+      "broadcastDate": "2024-01-24",
+      "channelName": "Mondo",
+      "duration": "6:50:34",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "8lEihN6reII",
+      "title": "1.23【ストグラ/ALLIN】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=8lEihN6reII",
+      "broadcastDate": "2024-01-23",
+      "channelName": "Mondo",
+      "duration": "10:46:05",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "e_ynzVzWCic",
+      "title": "1.21【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=e_ynzVzWCic",
+      "broadcastDate": "2024-01-21",
+      "channelName": "Mondo",
+      "duration": "10:39:20",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "knx7ENfzjPo",
+      "title": "1.20【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=knx7ENfzjPo",
+      "broadcastDate": "2024-01-20",
+      "channelName": "Mondo",
+      "duration": "9:25:57",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "lGRKNUyAXtQ",
+      "title": "1.19【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=lGRKNUyAXtQ",
+      "broadcastDate": "2024-01-19",
+      "channelName": "Mondo",
+      "duration": "4:33:14",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "jlx9U3gH1ss",
+      "title": "1.19 1【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=jlx9U3gH1ss",
+      "broadcastDate": "2024-01-19",
+      "channelName": "Mondo",
+      "duration": "2:00:11",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "JyqCyfNnBJk",
+      "title": "1.18【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=JyqCyfNnBJk",
+      "broadcastDate": "2024-01-18",
+      "channelName": "Mondo",
+      "duration": "9:27:02",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "U7X2F8wUMTo",
+      "title": "1.17【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=U7X2F8wUMTo",
+      "broadcastDate": "2024-01-17",
+      "channelName": "Mondo",
+      "duration": "7:33:15",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "vrEpHaM7vik",
+      "title": "1.16【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=vrEpHaM7vik",
+      "broadcastDate": "2024-01-16",
+      "channelName": "Mondo",
+      "duration": "8:22:26",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "LAUOEB8ktsQ",
+      "title": "1.14【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=LAUOEB8ktsQ",
+      "broadcastDate": "2024-01-14",
+      "channelName": "Mondo",
+      "duration": "4:51:49",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "kBcR65tXqEI",
+      "title": "1.12【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=kBcR65tXqEI",
+      "broadcastDate": "2024-01-12",
+      "channelName": "Mondo",
+      "duration": "7:00:02",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "zAIyhw4K2os",
+      "title": "1.11【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=zAIyhw4K2os",
+      "broadcastDate": "2024-01-11",
+      "channelName": "Mondo",
+      "duration": "8:59:05",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "Qg0mZmJAY_A",
+      "title": "1.06【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Qg0mZmJAY_A",
+      "broadcastDate": "2024-01-06",
+      "channelName": "Mondo",
+      "duration": "5:35:57",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "5MrWX0bHV6k",
+      "title": "1.04【ストグラ】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=5MrWX0bHV6k",
+      "broadcastDate": "2024-01-04",
+      "channelName": "Mondo",
+      "duration": "9:20:59",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
       "id": "RerBU18T0kY",
       "title": "rion カワセとTHE FINALSやる【THE FINALS】",
       "youtubeUrl": "https://www.youtube.com/watch?v=RerBU18T0kY",
@@ -7030,14 +7305,69 @@
       "memo": ""
     },
     {
+      "id": "Ancz3fViF-A",
+      "title": "【2023-11-02】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Ancz3fViF-A",
+      "broadcastDate": "2023-11-02",
+      "channelName": "Mondo",
+      "duration": "7:02:33",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
       "id": "Ln7WWiPm_Co",
       "title": "人生ゲーム",
       "youtubeUrl": "https://www.youtube.com/watch?v=Ln7WWiPm_Co",
       "broadcastDate": "2023-10-30",
       "channelName": "Mondo",
       "duration": "3:07:42",
+      "description": "인생게임(w. Tosaki mimi, Amamiya Kokoro, Shishido Akari)",
+      "tags": ["the Game of LIFE"],
+      "memo": ""
+    },
+    {
+      "id": "t1uAvvQyotA",
+      "title": "【2023-10-29】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=t1uAvvQyotA",
+      "broadcastDate": "2023-10-29",
+      "channelName": "Mondo",
+      "duration": "9:20:07",
       "description": "",
-      "tags": [],
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "LBXc-e-fF2s",
+      "title": "【2023-10-28 2】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=LBXc-e-fF2s",
+      "broadcastDate": "2023-10-29",
+      "channelName": "Mondo",
+      "duration": "4:25:06",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": ""
+    },
+    {
+      "id": "4KnhF9-98Sk",
+      "title": "【ストグラ10-28】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=4KnhF9-98Sk",
+      "broadcastDate": "2023-10-28",
+      "channelName": "Mondo",
+      "duration": "4:06:40",
+      "description": "",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
+      "memo": "オカチメンコ"
+    },
+    {
+      "id": "XSplmHyZ1gk",
+      "title": "【ストグラ10-26】",
+      "youtubeUrl": "https://www.youtube.com/watch?v=XSplmHyZ1gk",
+      "broadcastDate": "2023-10-26",
+      "channelName": "Mondo",
+      "duration": "7:15:35",
+      "description": "4갱(ALLIN, MOZU, Anbrella, IRiS) 합동 동시 대형범죄 제안",
+      "tags": ["GTA5","STGR","MonD","ALLIN"],
       "memo": ""
     },
     {
@@ -7047,8 +7377,8 @@
       "broadcastDate": "2023-10-16",
       "channelName": "Mondo",
       "duration": "2:02:25",
-      "description": "",
-      "tags": [],
+      "description": "Party Animals(w. Tachibana Hinano, Uzuki Kou, Watarai Hibari)",
+      "tags": ["Party Animals","花鳥牛月"],
       "memo": ""
     },
     {
@@ -7069,8 +7399,8 @@
       "broadcastDate": "2023-09-30",
       "channelName": "Mondo",
       "duration": "1:23:57",
-      "description": "",
-      "tags": [],
+      "description": "초록색 외계인 경찰",
+      "tags": ["GTA5","STGRFV"],
       "memo": ""
     },
     {
@@ -7455,7 +7785,7 @@
       "channelName": "Mondo",
       "duration": "4:27:47",
       "description": "",
-      "tags": [],
+      "tags": ["Apex Legends"],
       "memo": ""
     },
     {
@@ -7476,7 +7806,7 @@
       "broadcastDate": "2023-03-17",
       "channelName": "Mondo",
       "duration": "3:07:56",
-      "description": "",
+      "description": "Apex(w. Siro Manta, Aka)",
       "tags": ["Apex Legends","Mondo2"],
       "memo": ""
     },
@@ -7487,7 +7817,7 @@
       "broadcastDate": "2023-03-12",
       "channelName": "Mondo",
       "duration": "5:18:49",
-      "description": "",
+      "description": "Sons of the Forest(w. Tachibana Hinano, Komori Meto, Ichinose Uruha, Shirayuki Reid)",
       "tags": ["Sons of the Forest"],
       "memo": ""
     },
@@ -7498,7 +7828,7 @@
       "broadcastDate": "2023-03-11",
       "channelName": "Mondo",
       "duration": "4:15:49",
-      "description": "",
+      "description": "Sons of the Forest(w. Tachibana Hinano, Komori Meto, Ichinose Uruha, Shirayuki Reid)",
       "tags": ["Sons of the Forest"],
       "memo": ""
     },
@@ -7631,7 +7961,7 @@
       "channelName": "Mondo",
       "duration": "7:07:44",
       "description": "",
-      "tags": ["Mondo2","Mahjong Soul"],
+      "tags": ["Mahjong Soul","Mondo2"],
       "memo": ""
     },
     {
@@ -7652,7 +7982,7 @@
       "broadcastDate": "2023-02-08",
       "channelName": "Mondo",
       "duration": "52:06",
-      "description": "CPT, Selly와 Apex 랭크 플레이",
+      "description": "Apex Rank(w. CPT, Selly)",
       "tags": ["Apex Legends"],
       "memo": ""
     },
@@ -7696,7 +8026,7 @@
       "broadcastDate": "2022-09-29",
       "channelName": "Mondo",
       "duration": "2:01:10",
-      "description": "Selly와 Gundam Evolution 플레이",
+      "description": "Gundam Evolution(w. Selly)",
       "tags": ["Gundam Evolution"],
       "memo": ""
     },
@@ -7740,7 +8070,7 @@
       "broadcastDate": "2022-09-11",
       "channelName": "Mondo",
       "duration": "1:35:10",
-      "description": "Selly와 Splatoon3",
+      "description": "Splatoon3(w. Selly)",
       "tags": ["Splatoon3"],
       "memo": ""
     },
@@ -7751,7 +8081,7 @@
       "broadcastDate": "2022-09-09",
       "channelName": "Mondo",
       "duration": "2:21:19",
-      "description": "Ozizi, Selly, Hinari와 Splattoon3 플레이",
+      "description": "Splatoon3(w. Ozizi, Selly, Hinari)",
       "tags": ["Splatoon3"],
       "memo": ""
     },
@@ -7762,7 +8092,7 @@
       "broadcastDate": "2022-09-08",
       "channelName": "Mondo",
       "duration": "3:52:44",
-      "description": "Selly와 Splatoon3, Super Smash Bros Ultimate 플레이",
+      "description": "Splatoon3, Super Smash Bros Ultimate(w. Selly)",
       "tags": ["Splatoon3","Super Smash Bros Ultimate"],
       "memo": ""
     },
