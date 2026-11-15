@@ -1,14 +1,36 @@
 {
   "videos": [
     {
+      "id": "mVpZv_dSuC0",
+      "title": "gatigura day 2",
+      "youtubeUrl": "https://www.youtube.com/watch?v=mVpZv_dSuC0",
+      "broadcastDate": "2026-11-15",
+      "channelName": "Mondo",
+      "duration": "1:50:17",
+      "description": "리방. 핑 140 1vs1. 이누루리:부스팅 대응",
+      "tags": ["GTA5","ガチグラ２","STGR","Ruri"],
+      "memo": ""
+    },
+    {
+      "id": "cIgkULEclG0",
+      "title": "gatigura day 2",
+      "youtubeUrl": "https://www.youtube.com/watch?v=cIgkULEclG0",
+      "broadcastDate": "2026-11-14",
+      "channelName": "Mondo",
+      "duration": "3:11:24",
+      "description": "가치그라 2일차: 개인의 활동 시작, 트랙스 구입",
+      "tags": ["GTA5","ガチグラ２"],
+      "memo": ""
+    },
+    {
       "id": "dEU3k3tnUs0",
       "title": "gatigura day 1",
       "youtubeUrl": "https://www.youtube.com/watch?v=dEU3k3tnUs0",
       "broadcastDate": "2026-11-13",
       "channelName": "Mondo",
       "duration": "7:30:59",
-      "description": "펫 구입 후 경찰견 테스트. 가치그라 1일차:개인의 시작",
-      "tags": ["GTA5","STGR","Ruri","ガチグラ２"],
+      "description": "펫 구입 후 경찰견 테스트. 가치그라 1일차:미코다요와 무한 1vs1",
+      "tags": ["GTA5","STGR","Ruri","ガチグラ２","MonD"],
       "memo": ""
     },
     {
@@ -272,7 +294,7 @@
       "channelName": "Mondo",
       "duration": "4:08:02",
       "description": "",
-      "tags": [],
+      "tags": ["PUBG"],
       "memo": ""
     },
     {
@@ -305,7 +327,7 @@
       "channelName": "Mondo",
       "duration": "8:06:05",
       "description": "",
-      "tags": [],
+      "tags": ["OverWatch"],
       "memo": ""
     },
     {
@@ -316,7 +338,7 @@
       "channelName": "Mondo",
       "duration": "2:52:57",
       "description": "",
-      "tags": [],
+      "tags": ["Valorant"],
       "memo": ""
     },
     {
@@ -327,7 +349,7 @@
       "channelName": "Mondo",
       "duration": "3:19:42",
       "description": "",
-      "tags": [],
+      "tags": ["OverWatch"],
       "memo": ""
     },
     {
