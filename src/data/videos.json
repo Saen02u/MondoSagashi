@@ -1,6 +1,17 @@
 {
   "videos": [
     {
+      "id": "lCTxUjnv-yY",
+      "title": "gatigura day 3",
+      "youtubeUrl": "https://www.youtube.com/watch?v=lCTxUjnv-yY",
+      "broadcastDate": "2026-11-15",
+      "channelName": "Mondo",
+      "duration": "5:41:01",
+      "description": "가치그라 3일차:카미픽 시작",
+      "tags": ["GTA5","ガチグラ２"],
+      "memo": ""
+    },
+    {
       "id": "mVpZv_dSuC0",
       "title": "gatigura day 2",
       "youtubeUrl": "https://www.youtube.com/watch?v=mVpZv_dSuC0",
@@ -18,7 +29,7 @@
       "broadcastDate": "2026-11-14",
       "channelName": "Mondo",
       "duration": "3:11:24",
-      "description": "가치그라 2일차: 개인의 활동 시작, 트랙스 구입",
+      "description": "가치그라 2일차: 노란갱 용병, 트랙스 구입(핑크갱 삥 뜯기)",
       "tags": ["GTA5","ガチグラ２"],
       "memo": ""
     },
@@ -41,7 +52,7 @@
       "channelName": "Mondo",
       "duration": "5:28:37",
       "description": "",
-      "tags": ["GAT5","STGR2","MonD","STGRFV Casual"],
+      "tags": ["GTA5","STGR2","MonD","STGRFV Casual"],
       "memo": ""
     },
     {
@@ -162,7 +173,7 @@
       "channelName": "Mondo",
       "duration": "2:59:35",
       "description": "영혼관통대화, 시장보좌와 친치로. 전 ALLIN 멤버와 보드게임",
-      "tags": ["GAT5","STGR","MonD"],
+      "tags": ["GTA5","STGR","MonD"],
       "memo": ""
     },
     {
