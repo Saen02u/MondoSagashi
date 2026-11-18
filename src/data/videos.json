@@ -1,13 +1,35 @@
 {
   "videos": [
     {
+      "id": "btQI5EYKWf4",
+      "title": "gatigura day 5",
+      "youtubeUrl": "https://www.youtube.com/watch?v=btQI5EYKWf4",
+      "broadcastDate": "2026-11-17",
+      "channelName": "Mondo",
+      "duration": "4:37:02",
+      "description": "가치그라 5일차:",
+      "tags": ["GTA5","ガチグラ２"],
+      "memo": ""
+    },
+    {
+      "id": "UKhDWRYFTYI",
+      "title": "gatigura day 4",
+      "youtubeUrl": "https://www.youtube.com/watch?v=UKhDWRYFTYI",
+      "broadcastDate": "2026-11-16",
+      "channelName": "Mondo",
+      "duration": "3:17:47",
+      "description": "가치그라 4일차:",
+      "tags": ["GTA5","ガチグラ２"],
+      "memo": ""
+    },
+    {
       "id": "lCTxUjnv-yY",
       "title": "gatigura day 3",
       "youtubeUrl": "https://www.youtube.com/watch?v=lCTxUjnv-yY",
       "broadcastDate": "2026-11-15",
       "channelName": "Mondo",
       "duration": "5:41:01",
-      "description": "가치그라 3일차:카미픽 시작",
+      "description": "가치그라 3일차:본격적으로 개인의 시작",
       "tags": ["GTA5","ガチグラ２"],
       "memo": ""
     },
@@ -29,7 +51,7 @@
       "broadcastDate": "2026-11-14",
       "channelName": "Mondo",
       "duration": "3:11:24",
-      "description": "가치그라 2일차: 노란갱 용병, 트랙스 구입(핑크갱 삥 뜯기)",
+      "description": "가치그라 2일차:노란갱 용병, 트랙스 구입(핑크갱 삥 뜯기)",
       "tags": ["GTA5","ガチグラ２"],
       "memo": ""
     },
