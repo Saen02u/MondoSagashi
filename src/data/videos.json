@@ -1,13 +1,35 @@
 {
   "videos": [
     {
+      "id": "bMpt_V7zKV4",
+      "title": "d",
+      "youtubeUrl": "https://www.youtube.com/watch?v=bMpt_V7zKV4",
+      "broadcastDate": "2026-11-22",
+      "channelName": "Mondo",
+      "duration": "7:54:25",
+      "description": "Chill의 날, 코미네와 갱에 대해 토론, 자전거 체이스.",
+      "tags": ["GTA5","STGR","MonD","STGRFV Casual"],
+      "memo": ""
+    },
+    {
+      "id": "zEvKkE_ltWA",
+      "title": "gati",
+      "youtubeUrl": "https://www.youtube.com/watch?v=zEvKkE_ltWA",
+      "broadcastDate": "2026-11-21",
+      "channelName": "Mondo",
+      "duration": "6:32:17",
+      "description": "가치그라 8일차: 개인의vs핑크갱 항쟁. 스토그라:잡담 나시마의 최대의 실수 에스타크",
+      "tags": ["GTA5","ガチグラ２","STGR","MonD"],
+      "memo": ""
+    },
+    {
       "id": "2AyDfB2clcI",
       "title": "gati",
       "youtubeUrl": "https://www.youtube.com/watch?v=2AyDfB2clcI",
       "broadcastDate": "2026-11-20",
       "channelName": "Mondo",
       "duration": "4:14:11",
-      "description": "가치그라 7일차:누명보상으로 전차 선물, 핑크갱의 퍼시픽 중 무단침입, 전차로 경찰 습격, 1vs1 상대 놀리기. 무기 알바, 부스팅",
+      "description": "가치그라 7일차:누명보상으로 전차 선물, 핑크갱의 퍼시픽 중 무단침입, 전차로 경찰 습격, 1vs1 상대 놀리기. 스토그라: 무기 알바, 부스팅",
       "tags": ["GTA5","ガチグラ２","STGR","MonD"],
       "memo": ""
     },
