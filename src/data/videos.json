@@ -1,13 +1,24 @@
 {
   "videos": [
     {
+      "id": "RjFGYW_nKr0",
+      "title": "run",
+      "youtubeUrl": "https://www.youtube.com/watch?v=RjFGYW_nKr0",
+      "broadcastDate": "2026-11-23",
+      "channelName": "Mondo",
+      "duration": "5:43:21",
+      "description": "ROB RUN, Machine Party(w. Selley, Vanilla)",
+      "tags": ["ROB RUN","Machine Party"],
+      "memo": ""
+    },
+    {
       "id": "bMpt_V7zKV4",
       "title": "d",
       "youtubeUrl": "https://www.youtube.com/watch?v=bMpt_V7zKV4",
       "broadcastDate": "2026-11-22",
       "channelName": "Mondo",
       "duration": "7:54:25",
-      "description": "Chill의 날, 코미네와 갱에 대해 토론, 자전거 체이스.",
+      "description": "Chill의 날, 코미네와 갱에 대해 토론, 자전거 체이스",
       "tags": ["GTA5","STGR","MonD","STGRFV Casual"],
       "memo": ""
     },
@@ -7007,11 +7018,12 @@
       "tags": ["GTA5","STGR","MonD","ALLIN","LoL"],
       "memo": ""
     },
+
     {
       "id": "1yAhJmo3WE8",
       "title": "Mon D",
       "youtubeUrl": "https://www.youtube.com/watch?v=1yAhJmo3WE8",
-      "broadcastDate": "2024-03-13",
+      "broadcastDate": "2024-03-14",
       "channelName": "Mondo",
       "duration": "7:00:49",
       "description": "",
